@@ -5,7 +5,7 @@ def greet():
     print('****************************************************************************')
     print('******************** Welcome to net-H-toolz version 1.1 ********************')
     print('********************             coded by               ********************')
-    print('********************            shadowak47              ********************')
+    print('********************            Sadat Akhtar            ********************')
     print('****************************************************************************')
 
 
@@ -28,7 +28,7 @@ def menu():
 
 greet()
 menu()
-targetIp = input('Enter IP address/Web Address of target: \n\n')
+targetIp = input('Enter IP address/Web Address: \n\n')
 
 cont = 'y'
 
@@ -38,31 +38,31 @@ while cont == 'y':
 
     if selection == '1':
 
-        print('You have selected to Ping the target')
+        print('You have selected to Ping the host')
         ping()
         #subprocess.run(['ls', '-l'])
         subprocess.run(['ping', targetIp, '-c5'])
         print('Ping complete!')
-        cont = input('Continue Attack(y/n)? ')
+        cont = input('Continue(y/n)? ')
         if cont != 'y':
             break
 
     elif selection == '2':
 
-        print('You have selected to Trace the target')
+        print('You have selected to Trace the host')
         subprocess.run(['traceroute', targetIp])
         print('Trace complete!')
-        cont = input('Continue Attack(y/n)? ')
+        cont = input('Continue(y/n)? ')
         if cont != 'y':
             break
 
     elif selection == '3':
 
-        print('You have selected to perform a port scan on target')
+        print('You have selected to perform a port scan on host')
         print('This may take some time.....')
         subprocess.run(['nmap', '-A', targetIp])
         print('Port scan complete!')
-        cont = input('Continue Attack(y/n)? ')
+        cont = input('Continue(y/n)? ')
         if cont != 'y':
             break
 
@@ -71,7 +71,7 @@ while cont == 'y':
         print('Checking for all ports(listening) on system')
         subprocess.run(['netstat', '-l'])
         print('Scan complete!')
-        cont = input('Continue Attack(y/n)? ')
+        cont = input('Continue(y/n)? ')
         if cont != 'y':
             break
 
@@ -80,7 +80,7 @@ while cont == 'y':
         print('Checking all users on system')
         subprocess.run(['w'])
         print('User check complete!')
-        cont = input('Continue Attack(y/n)? ')
+        cont = input('Continue(y/n)? ')
         if cont != 'y':
             break
 
@@ -88,7 +88,7 @@ while cont == 'y':
         print('Checking routing table')
         subprocess.run(['netstat', '-r'])
         print('Check complete!')
-        cont = input('Continue Attack(y/n)? ')
+        cont = input('Continue(y/n)? ')
         if cont != 'y':
             break
 
